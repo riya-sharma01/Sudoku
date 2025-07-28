@@ -6,6 +6,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 30px;
+  font-size: larger;
 }
 
 /* Heading */
@@ -20,7 +21,7 @@ h1 {
   grid-template-columns: repeat(9, 50px); /* Ensure 9 columns */
   grid-template-rows: repeat(9, 50px);    /* Ensure 9 rows */
   gap: 0;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 /* Row and Cell Styling */
