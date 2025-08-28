@@ -2,11 +2,17 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #eee;
+  background-image: url(assests/s.jpg);
+  background-color: #f4f8de;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
   font-size: larger;
+  max-width: 100vw;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* Heading */
@@ -18,10 +24,10 @@ h1 {
 /* Sudoku Grid Styling */
 #sudoku-grid {
   display: grid;
-  grid-template-columns: repeat(9, 50px); /* Ensure 9 columns */
-  grid-template-rows: repeat(9, 50px);    /* Ensure 9 rows */
+  grid-template-columns: repeat(9, 42px);
+  grid-template-rows: repeat(9, 43px);
   gap: 0;
-  margin-bottom: 2px;
+  margin-bottom: 20px;
 }
 
 /* Row and Cell Styling */
@@ -30,6 +36,8 @@ h1 {
   justify-content: center;
   align-items: center;
   border: 1px solid #999;
+  width: 40px;
+  height: 40px;
 }
 
 input[type="number"] {
@@ -44,16 +52,16 @@ input[type="number"] {
 
 /* User-filled cells */
 input.user-filled {
-  background-color: #cce5ff;
+  background-color:beige;
 }
 
 /* Solved cells */
 input.solved {
-  background-color: #d4edda;
+  background-color: rgb(157, 164, 246);
 }
 
 input[type="number"]:focus {
-  outline: 2px solid #007bff;
+  outline: 2px solid #f7bcdf;
 }
 
 /* Solve Button Styling */
@@ -70,4 +78,16 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Bold vertical borders every 3 columns */
+.cell:nth-child(3n) {
+  border-right: 3px solid black;
+}
+
+/* Bold horizontal borders every 3 rows */
+.cell:nth-child(n + 19):nth-child(-n + 27),
+.cell:nth-child(n + 46):nth-child(-n + 54),
+.cell:nth-child(n + 73):nth-child(-n + 81) {
+  border-bottom: 3px solid black;
 }
